@@ -44,4 +44,4 @@ for li in get_ol:
 
 #lets export the df to a csv file
 #set index to False os that it doesn't copy row numbering 
-df.to_csv(r'D:\Self_learning\practice_projects\output\book_info.csv', index=False, encoding='utf-8-sig')
+df.to_csv(r'path_to_csv_file', index=False, encoding='utf-8-sig')
