@@ -14,7 +14,7 @@ def api_runner():
     }
     headers = {
     'Accepts': 'application/json',
-    'X-CMC_PRO_API_KEY': '0ad53085-1cb2-4eb8-ad9e-3ffbd7e56509',
+    'X-CMC_PRO_API_KEY': 'your_key',
     }
 
     session = Session()
@@ -32,10 +32,10 @@ def api_runner():
     #to store the time script is run in a column
     df['timestamp'] = pd.Timestamp.now()
 
-    if not os.path.isfile(r'D:\Self_learning\practice_projects\output\api.csv'):
-        df.to_csv(r'D:\Self_learning\practice_projects\output\api.csv', header = 'column_names')
+    if not os.path.isfile(r'path_to_csv'):
+        df.to_csv(r'path_to_csv', header = 'column_names')
     else:
-        df.to_csv(r'D:\Self_learning\practice_projects\output\api.csv',mode='a',header=False)
+        df.to_csv(r'path_to_csv',mode='a',header=False)
 
 for i in range(10):
     api_runner()
@@ -43,6 +43,3 @@ for i in range(10):
     sleep(60)
 exit()
 
-
-#for manipulation with df and visualization : 
-#https://colab.research.google.com/drive/1Ct42u3Uf3JZrkoxdGCsx4ROaC24lDba4#scrollTo=4ojUgBlfKkHV
