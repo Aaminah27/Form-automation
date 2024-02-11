@@ -37,6 +37,7 @@ def api_runner():
     else:
         df.to_csv(r'path_to_csv',mode='a',header=False)
 
+#just running the api for 10 times
 for i in range(10):
     api_runner()
     print('API RUN Number ' + str(i))
