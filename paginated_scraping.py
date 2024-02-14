@@ -15,7 +15,6 @@ for i in items:
     item_price = i.find('h5')
     if item_price != None:
         item_price = item_price.text
-        print('%s) Price: %s , Name: %s' % (count,item_price,item_title))
         data =[item_title, item_price]
         length_df = len(df)
         df.loc[length_df] = data
@@ -48,7 +47,6 @@ for u in urls:
         item_price = i.find('h5')
         if item_price != None:
             item_price = item_price.text
-            print('%s) Price: %s , Name: %s' % (count,item_price,item_title))
             data =[item_title, item_price]
             length_df = len(df)
             df.loc[length_df] = data
